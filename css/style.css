@@ -1,0 +1,110 @@
+:root {
+    --error-color: #dc3545;
+    --success-color: #28a745;
+    --warning-color: #ffc107;
+}
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+
+  html, body {
+    min-height: 100%;
+    height: 100%;
+  }
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    background-color: rgb(238, 238, 238);
+    font-family:Helvetica;
+  }
+  
+  
+  /*
+    5. Remove built-in form typography styles
+  */
+
+  label, small {
+    color: gray;
+    margin-block: 0.2rem;
+  }
+
+  input {
+    padding: 0.5rem;
+    outline: none;
+    border: 2px solid rgb(216, 215, 215);
+  }
+ 
+  input[type="submit"] {
+    background-color: #0ea5fd;
+    font-size: 1rem;
+    padding: 0.6rem;
+    color: #fff;
+    border: none;
+    outline: none;
+    font-weight: lighteer;
+    cursor: pointer;
+    transition: background-color ease-in-out 0.250ms;
+  }
+
+  input[type="submit"]:hover {
+    background-color: #33a7eb;
+  }
+
+  .container {
+    background-color: #fff;
+    max-inline-size: 25rem;
+    min-inline-size: 21.875;
+    inline-size: 100%;
+
+    -webkit-box-shadow: 0px 1px 7px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 1px 7px 0px rgba(0,0,0,0.75);
+box-shadow: 0px 1px 7px 0px rgba(0,0,0,0.75);
+  }
+
+  form {
+    padding: 0 2rem 2rem 2rem;
+    
+  }
+
+  form h1 {
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.9rem;
+    color: rgb(4, 4, 19);
+    margin-block-start: 1.5rem;
+    margin-block-end: 0.6rem;
+  }
+
+  .form-field {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-field small {
+    color: var(--error-color);
+}
+
+  .form-field.error input {
+    border-color: var(--error-color);
+}
+
+.form-field.success input {
+    border-color: var(--success-color);
+}
